@@ -8,6 +8,9 @@ function App() {
   function handleAddTodo(e) {
     const name = todoNameRef.current.value
     if (name === '') return
+    setTodos(prevTodos => {
+      return [...prevTodos, { id: 1, name: name, complete: false }]
+    })
     console.log(name)
     todoNameRef.current.value = null
   }
