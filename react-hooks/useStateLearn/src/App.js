@@ -6,7 +6,7 @@ function countInitial() {
 }
 
 function App() {
-  const [count, setCount] = useState(countInitial())
+  const [count, setCount] = useState(() => countInitial())
 
   function decrementCount() {
     setCount(prevCount => prevCount - 1)
